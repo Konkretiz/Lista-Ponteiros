@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+      int *y;                                                       // Declaramos todas as variáveis que vamos utilizar, imprimimos uma mensagem e recebemos o parâmetro indicando
+      int x,i,j,k;                                                  //a quantidade de números que vamos rearranjar(tamanho da matriz).
+      printf("Quantos números gostaria de rearranjar?\n ");
+      scanf("%d",&x);
+      y = malloc(x *sizeof(int));                                   // Declaramos a matriz de x números e alocamos o espaço necessário para este número de variáveis "int"
+      printf("Digite %d números: \n",x);
+      for(i=0;i<=x-1;i++)                                           // Criamos uma estrutura de repetição para receber x valores inteiros, que ordenaremos crescentemente
+      {
+            scanf("%d", (y+i));
+      }
+      for(i=0;i<x;i++)                                              // Criamos uma estrutura de repetição passando por todos os números declarados e verificando se o novo número
+      {                                                             //é menor que o anterior. Caso seja, utilizamos a variável k para reordenar na matriz.
+            for(j=0;j<=i;j++)
+            {
+                  if(*(y+i)<*(y+j))
+                  {
+                        k=*(y+i);
+                        *(y+i)=*(y+j);
+                        *(y+j)=k;
+                  }
+            }
+      }
+      for(i=0;i<x;i++)                                              // Finalmente, criamos uma estrutura de repetição para imprimir as coordenadas reordenadas, então liberamos
+      printf("\n%d",*(y+i));                                        //a memória alocada.
+      free (y);
+      return 0;
+}
