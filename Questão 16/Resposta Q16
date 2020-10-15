@@ -1,1 +1,3 @@
-Utilizando qsort, o tempo de execução foi de 0.0005s. No programa criado por mim anteriormente, o tempo de execução foi de 
+Utilizando qsort, o tempo de execução foi de 0.0005s. No programa criado por mim anteriormente, o tempo de execução foi de 0.0059s - indicando uma menor eficiência.
+
+O mecanismo utilizado foi a função clock() da biblioteca <time.h>.
