@@ -1,0 +1,7 @@
+i = 0vet[0] = 1.1*(f + 0) = 1.1&vet[0] = end1(f + 0) = end1
+i = 1vet[1] = 2.2*(f + 1) = 2.2&vet[1] = end2(f + 1) = end2
+i = 2vet[2] = 3.3*(f + 2) = 3.3&vet[2] = end3(f + 2) = end3
+i = 3vet[3] = 4.4*(f + 3) = 4.4&vet[3] = end4(f + 3) = end4
+i = 4vet[4] = 5.5*(f + 4) = 5.5&vet[4] = end5(f + 4) = end5
+
+//Os "endereços"(end1, end2, end3, end4 e end5) serão hexadecimais retornados referentes a cada endereço alocado na memória.
