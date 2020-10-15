@@ -1,0 +1,30 @@
+O ponteiro para função armazena o "endereço da memória" da função. Ou seja, torna possível recuperar o segmento de texto correspondente ao código da função.
+
+#include <stdio.h>
+
+int troca (int *a, int *b);                           // Declaração da função "troca"
+
+int main() {
+
+  int x, y = 0;                                       // Declaração das variáveis x e y, assim como ponteiros que utilizaremos no decorrer do programa
+  int *px, *py = NULL;
+  py = &y;
+  px = &x;
+
+  printf("Digite o valor inteiro de x: ");            // Nas linhas 14 até 17 imprimimos um comando e recebemos valores que serão atribuídos nos endereços de x e y
+  scanf("%d", &x); 
+  printf("Digite o valor inteiro de y: ");
+  scanf("%d", &y);
+  printf("x = %d, y = %d\n", x, y);                   // Aqui imprimimos os valores iniciais de x e y
+  int (*pt) (int*, int*) = &troca;                    // Aqui utilizamos um ponteiro para a função troca, que utilizaremos na linha 20 para associar aos valores declarados de x e y
+  pt(px,py);
+  printf("x = %d, y = %d\n", x, y);                   // Imprimimos, então, os valores trocados de x e y pela função troca
+  return 0;}
+
+int troca (int *a, int *b) {                          // Aqui, fora da "main", construímos a função troca utilizando ponteiros e uma variável temporária "temp"
+  int temp;
+  temp = *a;
+  *a = *b;
+  *b = temp;
+  return 0;
+  }
