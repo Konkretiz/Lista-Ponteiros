@@ -1,0 +1,13 @@
+Válidos:
+
+aloha[2] = value;         //  Atribui à coordenada [2] do vetor aloha o valor de "value", 2.2
+coisas[4][4] = aloha[3];  //  Atribui à coordenada [4][4] do vetor coisas o valor da coordenada [3] do vetor aloha
+pf = aloha;               //  "Aponta" pf para o endereço de aloha
+
+
+Inválidos:
+
+aloha = value";          
+scanf("%f", &aloha);     
+coisas[5] = aloha;       
+pf = value;              
