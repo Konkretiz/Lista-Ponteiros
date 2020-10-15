@@ -1,0 +1,10 @@
+int main(){
+  char vet[4];              //Nesta linha, trocamos o tipo "char" pelo tipo desejado para testar as diferentes impressões.
+  int i;
+  for(i=0;i<4;i++){
+  printf("%X ",vet+i);
+  }
+}
+
+
+As respostas obtidas se assemelham ao que havia sido idealizado, porém são adequadas ao sistema hexadecimal.
