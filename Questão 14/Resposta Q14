@@ -1,0 +1,27 @@
+#include <stdio.h> 
+#include <stdlib.h> 
+
+int compare (const void * a, const void * b)                        // Função que será usada por qsort para ordenar os números
+{
+  return ( *(int*)a - *(int*)b );
+}
+
+int main ()
+{
+      float k;  
+      float *y;                                                     // Declaramos todas as variáveis que vamos utilizar, imprimimos uma mensagem e recebemos o parâmetro indicando
+      int x,i,j,n;                                                  //a quantidade de números que vamos rearranjar(tamanho da matriz).
+      printf("Quantos números gostaria de rearranjar?\n ");
+      scanf("%d",&x);
+      y = malloc(x *sizeof(float));                                 // Declaramos a matriz de x números e alocamos o espaço necessário para este número de variáveis "float"
+      printf("Digite %d números: \n",x);
+      for(i=0;i<=x-1;i++)                                           // Criamos uma estrutura de repetição para receber x valores inteiros, que ordenaremos crescentemente
+      {
+            scanf("%f", (y+i));
+      }
+  qsort (y, x, sizeof(float), compare);                             // Usamos qsort para rearranjar os números em ordem crescente, e criamos uma estrutura de repetição para
+  for (n=0; n<x; n++)                                               //imprimi-los de forma ordenada. Então liberamos o espaço que tinha sido alocado na memória
+     printf ("%f\n",y[n]);
+     free(y);
+  return 0;
+}
