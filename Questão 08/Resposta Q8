@@ -1,0 +1,10 @@
+int main(){
+  int vet[] = {4,9,13};        //Declara o vetor de 3 elementos (4,9,13)
+  int i;                       //Declara a variável i
+  for(i=0;i<3;i++){            //As linhas 4 e 5 criam uma impressão com incremento para os valores de 0<=i<3, que imprimirá os valores das 3 coordenadas do vetor.
+  printf("%d ",*(vet+i));
+  }
+}
+
+
+O segundo programa é construído da mesma maneira, mas imprime o endereço das 3 coordenadas do vetor.
